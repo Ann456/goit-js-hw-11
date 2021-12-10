@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Поиск информации</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-    <include src="./partials/11-hw.html"></include>
-    <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
-    <script src="./index.js"></script>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" /><!-- https://materializecss.com/icons.html -->
+  <title>Homework 11</title>
+</head>
+
+<body>
+
+  <form class="search-form" id="search-form">
+    <h1 class='search-form__title'>You can find any images</h1>
+    <input class="search-input" type="text" name="query" autocomplete="off" placeholder="Search images..." />
+    <button type="submit" class="search-btn">Search</button>
+  </form>
+  <div class="container">
+    <div class="gallery"></div>
+
+    <button type="button" class="load-more-btn" data-action="load-more">
+      <span class="spinner is-hidden" aria-hidden="true"></span>
+      <span class="label">Load more</span>
+    </button>
+    
+  </div>
+  <script src="index.js"></script>
+</body>
+
 </html>
